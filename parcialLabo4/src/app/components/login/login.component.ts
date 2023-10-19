@@ -34,7 +34,7 @@ export class LoginComponent {
             showConfirmButton: false,
             timer: 1500,
           }).then(() => {
-            this.router.navigate(['/altaProducto']);
+            this.router.navigate(['/inicio']);
           });
         })
         .catch((error) => {
@@ -77,7 +77,7 @@ export class LoginComponent {
           showConfirmButton: false,
           timer: 1500,
         }).then(() => {
-          this.router.navigate(['/altaProducto']);
+          this.router.navigate(['/inicio']);
         });
       })
       .catch((error) => {

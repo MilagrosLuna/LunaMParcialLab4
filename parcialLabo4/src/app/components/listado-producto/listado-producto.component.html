@@ -1,0 +1,35 @@
+<main>
+  <div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <table>
+          <thead>
+            <tr>
+              <th>Descripcion</th>
+              <th>Codigo</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>pais</th>
+              <th>Es comestible?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let producto of productos">
+              <tr
+                (click)="selectProducto(producto)"
+                [ngClass]="{ selected: producto === productoSele }"
+              >
+                <td>{{ producto.descripcion }}</td>
+                <td>{{ producto.codigo }}</td>
+                <td>{{ producto.precio }}</td>
+                <td>{{ producto.stock }}</td>
+                <td>{{ producto.pais }}</td>
+                <td>{{ producto.comestible ? "Sí" : "No" }}</td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

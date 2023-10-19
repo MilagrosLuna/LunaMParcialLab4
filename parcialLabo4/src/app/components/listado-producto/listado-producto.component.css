@@ -1,0 +1,34 @@
+/* Estilo para la tabla */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para las celdas del encabezado */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+
+  font-size: 20px;
+}
+
+/* Estilo para las celdas de datos */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+
+  font-size: 16px;
+}
+
+td img {
+  max-width: 100%;
+  height: 180px;
+}
+
+.selected {
+  background-color: #3f51b5;
+  color: white;
+}

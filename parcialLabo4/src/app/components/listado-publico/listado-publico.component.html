@@ -1,0 +1,5 @@
+<button class="btn btn-primary" routerLink="/bienvenido">Bienvenida</button>  
+<p></p> 
+<button class="btn btn-primary" routerLink="/login">Login</button>
+<app-listado-producto [productos]="productos"
+(prodcutoSeleccionada)="OnSelectproducto($event)" ></app-listado-producto>

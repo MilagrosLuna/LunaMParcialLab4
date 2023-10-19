@@ -1,0 +1,25 @@
+<main>
+    <div class="container py-4">
+      <div >
+       <app-listado-producto [productos]="productos"
+       (prodcutoSeleccionada)="OnSelectproducto($event)" ></app-listado-producto>
+      </div>
+  
+      <div *ngIf="productoSele" class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-white bg-dark rounded-3">
+            <app-detalle-producto
+              [producto]="productoSele"
+            ></app-detalle-producto>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <app-detalle-pais-producto [pais]="pais"></app-detalle-pais-producto>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  

@@ -1,0 +1,32 @@
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #333; /* Color de fondo de la barra de navegación */
+  }
+  
+  .navbar li {
+    margin: 0;
+  }
+  
+  .navbar li button {
+    background: none;
+    border: none;
+    color: #fff; /* Color del texto de los botones */
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .navbar li button:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse por encima */
+  }
+  
+  /* Estilo para el botón activo (el de la página actual) */
+  .navbar li button.active {
+    background-color: #007bff; /* Color de fondo del botón activo */
+  }
+  
+  /* Añade estilos de margen o espacio entre los botones si lo deseas */
+  

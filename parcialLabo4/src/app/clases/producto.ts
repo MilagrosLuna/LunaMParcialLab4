@@ -1,5 +1,5 @@
 export class Producto {
-  id: number;
+  id: string;
   codigo: number;
   descripcion: string;
   precio: number;
@@ -13,9 +13,10 @@ export class Producto {
     precio: number,
     stock: number,
     comestible: boolean,
-    pais: string
+    pais: string,
+    id = ''
   ) {
-    this.id = -1;
+    this.id = id;
     this.descripcion = descripcion;
     this.codigo = codigo;
     this.precio = precio;

@@ -7,7 +7,9 @@ import {
   deleteDoc,
   doc,
   getDocs,
+  query,
   updateDoc,
+  where,
 } from '@angular/fire/firestore';
 
 @Injectable({
@@ -34,5 +36,45 @@ export class ProductosService {
       console.error('Error al agregar el producto: ', error);
       return false;
     }
+  }
+  public async traerProductosBd(): Promise<Producto[]> {
+    const pizzasCollection = collection(this.firestore, 'productos');
+    const query = await getDocs(pizzasCollection);
+    const pizzas: Producto[] = query.docs.map((doc) => {
+      const data = doc.data();
+      const pizza = new Producto(
+        data['descripcion'],
+        data['codigo'],
+        data['precio'],
+        data['stock'],
+        data['comestible'],
+        data['pais']
+      );
+      pizza.id = doc.id;
+      return pizza;
+    });
+    return pizzas;
+  }
+
+  public async traerProductosConStockMayorACero(): Promise<Producto[]> {
+    const productosCollection = collection(this.firestore, 'productos');
+    const quersy = query(productosCollection, where('stock', '>', 0));
+    const querySnapshot = await getDocs(quersy);
+
+    const productos: Producto[] = querySnapshot.docs.map((doc) => {
+      const data = doc.data();
+      const producto = new Producto(
+        data['descripcion'],
+        data['codigo'],
+        data['precio'],
+        data['stock'],
+        data['comestible'],
+        data['pais']
+      );
+      producto.id = doc.id;
+      return producto;
+    });
+
+    return productos;
   }
 }
