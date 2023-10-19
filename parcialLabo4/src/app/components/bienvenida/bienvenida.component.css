@@ -1,0 +1,66 @@
+/* Estilos para el contenedor principal */
+.main {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .user-profile {
+    background-color: #f4f4f4c9; /* Cambia el color de fondo */
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el encabezado del usuario */
+  .user-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Cambia el color del texto del encabezado */
+  }
+  
+  /* Estilos para los enlaces */
+  .user-links {
+    color: #007bff; /* Cambia el color de los enlaces */
+    text-decoration: none; /* Quita el subrayado */
+    margin-right: 10px;
+  }
+  
+  .user-links:hover {
+    text-decoration: underline; /* Subraya los enlaces al pasar el ratón por encima */
+  }
+  
+  /* Estilos para la imagen de avatar */
+  .user-avatar {
+    max-width: 200px; /* Ajusta el tamaño máximo de la imagen del avatar */
+    border-radius: 50%; /* Hace que la imagen del avatar tenga forma de círculo */
+    margin-top: 10px;
+  }
+  
+  /* Estilos para los párrafos de información del usuario */
+  .user-paragraphs {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  /* Estilos para los detalles del usuario (Nombre de usuario, ubicación, tipo, etc.) */
+  .user-details {
+    font-weight: bold; /* Hace que los detalles del usuario sean negritas */
+  }
+  body,
+  h2,
+  label,
+  p,
+  .form-control,
+  .btn-primary,
+  .mt-3 a {
+    font-family: "Roboto", sans-serif;
+  }

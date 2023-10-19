@@ -1,0 +1,138 @@
+.invalid {
+  color: red;
+}
+/* login.component.css */
+/* Estilo para el contenedor principal */
+.main {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 30%;
+  padding: 30px;
+  border: 1px solid #703ff8;
+  border-radius: 5px;
+  color: #fff;
+  background: radial-gradient(circle, #000 0%, transparent 80%), #000;
+  background-size: cover;
+  box-shadow: 0 2px 5px rgba(118, 33, 255, 0.959);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el encabezado */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff; /* Cambiar el color del texto para que sea visible en el fondo oscuro */
+}
+.formulario {
+  width: 100%;
+}
+/* Estilo para los campos de entrada */
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para las etiquetas de los campos */
+label {
+  font-weight: bold;
+  color: #fff; /* Cambiar el color del texto para que sea visible en el fondo oscuro */
+}
+
+/* Estilo para los campos de entrada de texto */
+.form-control {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Hacer que los campos de entrada sean semi-transparentes */
+  color: #fff; /* Cambiar el color del texto para que sea visible en el fondo oscuro */
+}
+/* Estilo para el botón de inicio de sesión */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #a844fa;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #8800f8;
+}
+
+/* Estilo para el enlace "Registrarse" */
+.mt-3 a {
+  color: #a844fa;
+  text-decoration: none;
+}
+
+/* Cambiar el estilo del enlace "Registrarse" al pasar el ratón por encima */
+.mt-3 a:hover {
+  text-decoration: underline;
+}
+body,
+h2,
+label,
+p,
+small,
+.form-control,
+.btn-primary,
+.mt-3 a {
+  font-family: "Roboto", sans-serif;
+}
+.invalid {
+  color: red;
+}
+/* Estilo base */
+/* ... (código anterior) ... */
+
+/* Estilo para pantallas pequeñas (por ejemplo, teléfonos) */
+@media (max-width: 767px) {
+  .container {
+    width: 80%;
+    padding: 20px;
+  }
+  .formulario {
+    width: 80%;
+  }
+  .form-control {
+    font-size: 14px;
+  }
+}
+
+/* Estilo para pantallas medianas (por ejemplo, tabletas) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 60%;
+    padding: 20px;
+  }
+  .formulario {
+    width: 80%;
+  }
+  .form-control {
+    font-size: 16px;
+  }
+}

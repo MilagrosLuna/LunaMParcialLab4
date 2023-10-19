@@ -1,0 +1,191 @@
+<body class="bg-light">
+  <div class="container">
+    <main>
+      <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Seleccione el pais</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <app-listado-paises></app-listado-paises>
+          </ul>
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Datos del Producto</h4>
+          <form
+            (ngSubmit)="onSubmit()"
+            [formGroup]="form"
+            class="needs-validation"
+          >
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="productoCodigo" class="form-label"
+                  >Codigo del producto:</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="productoCodigo"
+                  placeholder=""
+                  formControlName="productoCodigo"
+                />
+                <div *ngIf="form.controls['productoCodigo'].errors != null">
+                  <small
+                    class="invalid"
+                    *ngIf="
+                      form.controls['productoCodigo'].errors!['required'] &&
+                      form.controls['productoCodigo'].errors!['required'] &&
+                      form.controls['productoCodigo'].touched
+                    "
+                    >Debe ingresar el Codigo del producto.
+                  </small>
+                  <small
+                    class="invalid"
+                    *ngIf="form.controls['productoCodigo'].errors['min']"
+                  >
+                    el Codigo del producto debe ser mayor o igual a 1.
+                  </small>
+                  <small
+                    class="invalid"
+                    *ngIf="form.controls['productoCodigo'].errors['max']"
+                  >
+                    el Codigo del producto debe ser menor o igual a 1000.
+                  </small>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="productoDescripcion" class="form-label"
+                  >Descripcion del producto:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productoDescripcion"
+                  placeholder=""
+                  formControlName="productoDescripcion"
+                />
+                <div
+                  *ngIf="form.controls['productoDescripcion'].errors != null"
+                >
+                  <small
+                    class="invalid"
+                    *ngIf="
+                      form.controls['productoDescripcion'].errors![
+                        'required'
+                      ] && form.controls['productoDescripcion'].touched
+                    "
+                    >Debe ingresar la descripcion del producto..</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="productoPrecio" class="form-label"
+                  >precio del producto:</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="productoPrecio"
+                  placeholder=""
+                  formControlName="productoPrecio"
+                />
+                <div *ngIf="form.controls['productoPrecio'].errors != null">
+                  <small
+                    class="invalid"
+                    *ngIf="
+                      form.controls['productoPrecio'].errors!['required'] &&
+                      form.controls['productoPrecio'].errors!['required'] &&
+                      form.controls['productoPrecio'].touched
+                    "
+                    >Debe ingresar el precio del producto.
+                  </small>
+                  <small
+                    class="invalid"
+                    *ngIf="form.controls['productoPrecio'].errors['min']"
+                  >
+                    el precio del producto debe ser mayor o igual a 1.
+                  </small>
+                  <small
+                    class="invalid"
+                    *ngIf="form.controls['productoPrecio'].errors['max']"
+                  >
+                    el precio del producto debe ser menor o igual a 1000.
+                  </small>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="productoStock" class="form-label"
+                  >stock del producto:</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="productoStock"
+                  placeholder=""
+                  formControlName="productoStock"
+                />
+                <div *ngIf="form.controls['productoStock'].errors != null">
+                  <small
+                    class="invalid"
+                    *ngIf="
+                      form.controls['productoStock'].errors!['required'] &&
+                      form.controls['productoStock'].errors!['required'] &&
+                      form.controls['productoStock'].touched
+                    "
+                    >Debe ingresar el stock del producto.
+                  </small>
+                  <small
+                    class="invalid"
+                    *ngIf="form.controls['productoStock'].errors['min']"
+                  >
+                    el stock del producto debe ser mayor o igual a 1.
+                  </small>
+                  <small
+                    class="invalid"
+                    *ngIf="form.controls['productoStock'].errors['max']"
+                  >
+                    el stock del producto debe ser menor o igual a 1000.
+                  </small>
+                </div>
+              </div>
+              
+              <div class="col-sm-6">
+                <label for="selectedCountry" class="form-label"
+                  >País del Producto:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="selectedCountry"
+                  [value]="selectedCountry ? selectedCountry.name : ''"
+                  formControlName="selectedCountry"
+                />
+              </div>
+
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="productoComestible"
+                  formControlName="productoComestible"
+                />
+                <label class="form-check-label" for="productoComestible"
+                  >Comestible</label
+                >
+              </div>
+            </div>
+            <hr class="my-4" />
+            <button class="w-100 btn btn-primary btn-lg" type="submit">
+              Agregar producto
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="form-validation.js"></script>
+</body>

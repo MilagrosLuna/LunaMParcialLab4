@@ -1,0 +1,61 @@
+.country-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
+  max-height: 410px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #3f51b5;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección de flex a columna */
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  /* width: calc(50% - 10px);  Controla el ancho de las tarjetas y agrega espacio entre ellas */
+  max-width: 300px; /* Establece un ancho máximo */
+}
+
+.card img {
+  width: 40px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.card:hover {
+  background-color: #f0f0f0;
+}
+.country-list .cards .card.selected {
+  background-color: #3f51b5;
+  color: white;
+}

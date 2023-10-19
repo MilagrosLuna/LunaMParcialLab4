@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "parcialml": {
+      "hosting": {
+        "parcialLabo4": [
+          "parcialml"
+        ]
+      }
+    },
+    "labo4-7d1e4": {
+      "hosting": {
+        "parcialLabo4": [
+          "labo4-7d1e4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "labo4-7d1e4"
+  }
+}

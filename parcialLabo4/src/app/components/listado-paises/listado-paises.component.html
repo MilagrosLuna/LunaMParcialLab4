@@ -1,0 +1,21 @@
+<div class="country-list">
+    <h1>Lista de Países</h1>
+    <input
+      type="text"
+      [(ngModel)]="searchText"
+      placeholder="Buscar país"
+      (input)="filterCountries()"
+    />
+    <div class="cards">
+      <div
+        class="card"
+        *ngFor="let country of filteredCountries"
+        (click)="selectCountry(country)"
+        [ngClass]="{ selected: country === selectedCountry }"
+      >
+        <img loading="lazy" [src]="country.flag" alt="{{ country.name }}" />
+        <h2>{{ country.name }}</h2>
+      </div>
+    </div>
+  </div>
+  
