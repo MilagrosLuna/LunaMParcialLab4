@@ -7,6 +7,7 @@ import { activateGuard } from './guards/activate.guard';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ListadoComponent } from './components/listado/listado.component';
 import { ListadoPublicoComponent } from './components/listado-publico/listado-publico.component';
+import { ContainersComponent } from './components/containers/containers.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -30,7 +31,12 @@ const routes: Routes = [
         path: 'listadoProductos',
         canActivate: [activateGuard],
         component: ListadoComponent,
-      },     
+      },
+      {
+        path: 'Containers',
+        canActivate: [activateGuard],
+        component: ContainersComponent,
+      },
     ],
   },
   {

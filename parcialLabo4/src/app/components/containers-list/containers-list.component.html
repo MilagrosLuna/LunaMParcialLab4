@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Color</th>
+      <th>Empresa</th>
+      <th>Capacidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let container of containers">
+      <tr
+        (click)="selectcontainer(container)"
+        [ngClass]="{ selected: container === containerSele }"
+      >
+        <td>{{ container.codigo }}</td>
+        <td>{{ container.color }}</td>
+        <td>{{ container.empresa }}</td>
+        <td>{{ container.capacidad }} litros</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

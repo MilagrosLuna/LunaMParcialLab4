@@ -1,0 +1,13 @@
+<div *ngIf="containerSeleccionado" class="card">
+  <div class="card-body">
+    <h5 class="card-title">Contenedor {{ containerSeleccionado.codigo }}</h5>
+    <p class="card-text">Color: {{ containerSeleccionado.color }}</p>
+    <p class="card-text">Empresa: {{ containerSeleccionado.empresa }}</p>
+    <p class="card-text">
+      Capacidad: {{ containerSeleccionado.capacidad }} litros
+    </p>
+    <button class="btn btn-danger" (click)="confirmarBorrarContainer()">
+      Eliminar Contenedor
+    </button>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+<div class="card-body">
+  <div *ngIf="containerSeleccionado">
+    <h4 class="mb-3">Datos del contenedor</h4>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form" class="needs-validation">
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="containerCodigo" class="form-label"
+            >Código del Contenedor:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="containerCodigo"
+            [value]="containerSeleccionado.codigo"
+            readonly
+          />
+        </div>
+
+        <div class="col-sm-6">
+          <label for="containerColor" class="form-label"
+            >color del Contenedor:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="containerColor"
+            placeholder=""
+            formControlName="containerColor"
+          />
+          <div *ngIf="form.controls['containerColor'].errors != null">
+            <small
+              class="invalid"
+              *ngIf="
+                form.controls['containerColor'].errors!['required'] &&
+                form.controls['containerColor'].touched
+              "
+              >Debe ingresar el color del contenedor.</small
+            >
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="containerEmpresa" class="form-label"
+            >empresa del Contenedor:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="containerEmpresa"
+            placeholder=""
+            formControlName="containerEmpresa"
+          />
+          <div *ngIf="form.controls['containerEmpresa'].errors != null">
+            <small
+              class="invalid"
+              *ngIf="
+                form.controls['containerEmpresa'].errors!['required'] &&
+                form.controls['containerEmpresa'].touched
+              "
+              >Debe ingresar la empresa del contenedor.</small
+            >
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="containerCapacidad" class="form-label"
+            >capacidad del Contenedor:</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="containerCapacidad"
+            placeholder=""
+            formControlName="containerCapacidad"
+          />
+          <div *ngIf="form.controls['containerCapacidad'].errors != null">
+            <small
+              class="invalid"
+              *ngIf="
+                form.controls['containerCapacidad'].errors!['required'] &&
+                form.controls['containerCapacidad'].errors!['required'] &&
+                form.controls['containerCapacidad'].touched
+              "
+              >Debe ingresar la capacidad del contenedor.</small
+            >
+            <small
+              class="invalid"
+              *ngIf="form.controls['containerCapacidad'].errors['min']"
+            >
+              capacidad debe ser mayor o igual a $1.
+            </small>
+            <small
+              class="invalid"
+              *ngIf="form.controls['containerCapacidad'].errors['max']"
+            >
+              capacidad debe ser menor o igual a $1000.
+            </small>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <button class="w-100 btn btn-primary btn-lg" type="submit">
+        Modificar Contenedor
+      </button>
+    </form>
+  </div>
+ 
+</div>

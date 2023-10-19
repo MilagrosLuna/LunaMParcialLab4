@@ -20,9 +20,12 @@ import { ListadoComponent } from './components/listado/listado.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ContainersComponent } from './components/containers/containers.component';
 import { ContainersADDComponent } from './components/containers-add/containers-add.component';
+import { ContainersDELETEComponent } from './components/containers-delete/containers-delete.component';
+import { ContainersMODIFYComponent } from './components/containers-modify/containers-modify.component';
+import { ContainersLISTComponent } from './components/containers-list/containers-list.component';
 
 @NgModule({
-  declarations: [AppComponent, BienvenidaComponent, LoginComponent, AltaProductoComponent, ListadoPaisesComponent, ListadoProductoComponent, DetalleProductoComponent, DetallePaisProductoComponent, ListadoPublicoComponent, ListadoComponent, InicioComponent, ContainersComponent, ContainersADDComponent],
+  declarations: [AppComponent, BienvenidaComponent, LoginComponent, AltaProductoComponent, ListadoPaisesComponent, ListadoProductoComponent, DetalleProductoComponent, DetallePaisProductoComponent, ListadoPublicoComponent, ListadoComponent, InicioComponent, ContainersComponent, ContainersADDComponent, ContainersDELETEComponent, ContainersMODIFYComponent, ContainersLISTComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
